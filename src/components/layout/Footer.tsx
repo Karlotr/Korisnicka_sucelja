@@ -56,37 +56,7 @@ export function Footer({ appName }: FooterProps) {
             </ul>
           </div>
 
-          <div>
-            <h4 className="mb-4 text-sm font-semibold text-neutral-200">
-              Support
-            </h4>
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  href="/support"
-                  className="text-sm text-neutral-400 hover:text-neutral-200"
-                >
-                  Help center
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/privacy"
-                  className="text-sm text-neutral-400 hover:text-neutral-200"
-                >
-                  Privacy policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/terms"
-                  className="text-sm text-neutral-400 hover:text-neutral-200"
-                >
-                  Terms of service
-                </Link>
-              </li>
-            </ul>
-          </div>
+          
         </div>
 
         <div className="mt-12 border-t border-neutral-800 pt-6">
