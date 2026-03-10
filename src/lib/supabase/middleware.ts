@@ -14,47 +14,44 @@ export async function updateSession(request: NextRequest) {
     {
       cookies: {
         get(name: string) {
-          return request.cookies.get(name)?.value;
+          try {
+            const value = request.cookies.get(name)?.value;
+            if (value) {
+              JSON.stringify(value);
+            }
+            return value;
+          } catch {
+            return undefined;
+          }
         },
         set(name: string, value: string, options: CookieOptions) {
-          request.cookies.set({
-            name,
-            value,
-            ...options,
-          });
-          response = NextResponse.next({
-            request: {
-              headers: request.headers,
-            },
-          });
-          response.cookies.set({
-            name,
-            value,
-            ...options,
-          });
+          try {
+            request.cookies.set({ name, value, ...options });
+            response = NextResponse.next({
+              request: { headers: request.headers },
+            });
+            response.cookies.set({ name, value, ...options });
+          } catch {
+          }
         },
         remove(name: string, options: CookieOptions) {
-          request.cookies.set({
-            name,
-            value: '',
-            ...options,
-          });
-          response = NextResponse.next({
-            request: {
-              headers: request.headers,
-            },
-          });
-          response.cookies.set({
-            name,
-            value: '',
-            ...options,
-          });
+          try {
+            request.cookies.set({ name, value: '', ...options });
+            response = NextResponse.next({
+              request: { headers: request.headers },
+            });
+            response.cookies.set({ name, value: '', ...options });
+          } catch {
+          }
         },
       },
     }
   );
 
-  await supabase.auth.getUser();
+  try {
+    await supabase.auth.getUser();
+  } catch {
+  }
 
   return response;
 }
