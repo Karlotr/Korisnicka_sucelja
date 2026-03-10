@@ -14,7 +14,13 @@ function hasRecoveryParams() {
   const searchParams = new URLSearchParams(window.location.search);
   const hashParams = new URLSearchParams(window.location.hash.replace(/^#/, ''));
 
-  return searchParams.get('type') === 'recovery' || hashParams.get('type') === 'recovery';
+  return (
+    searchParams.get('type') === 'recovery' ||
+    hashParams.get('type') === 'recovery' ||
+    searchParams.has('code') ||
+    searchParams.has('token_hash') ||
+    hashParams.has('access_token')
+  );
 }
 
 export default function ResetPasswordPage() {
@@ -32,7 +38,9 @@ export default function ResetPasswordPage() {
     const syncRecoveryState = async () => {
       const { data, error: sessionError } = await supabase.auth.getSession();
 
-      if (!sessionError && data.session && hasRecoveryParams()) {
+      if (!sessionError && data.session) {
+        setIsRecoverySession(true);
+      } else if (hasRecoveryParams()) {
         setIsRecoverySession(true);
       }
 
