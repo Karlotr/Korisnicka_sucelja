@@ -1,25 +1,49 @@
-﻿# KorisckaSucelja
+﻿# Apartment Finder
 
-## Apartment Finder
+- [Project Structure](#project-structure)
+- [My Project Links](#my-project-links)
+  - [Semester Project](#semester-project)
+  - [Semester Assignments](#semester-assignments)
+- [Project Requirements](#project-requirements)
+  - [Web Application Requirements](#web-application-requirements)
+  - [Project Demonstration](#project-demonstration)
 
-### Problem
+## Project Structure
 
-Ova aplikacija olakšava turistima rezerviranje željenih apartmana na jednostavan i brz način. Također omogućava iznajmljivačima lakše praćenje rezervacija i prikaz raspoloživih termina zainteresiranim turistima. 
+- **`/`**: The source code of main project
+- **`/assignments`**: semester assignments
 
-### Targets
+## My Project Links
 
-Turisti i iznajmljivači u turizmu
+### Semester Project
 
-### Solution
+- Link to your production version: [**Production Version**](https://koriscka-sucelja.vercel.app/)
+- Link to Final report: [**Final report**](./assignments/FinalReport/FinalReport.md)
 
-Prikaz turistima svih oglašavanih apartmana koji se mogu filtrirati po raznim značajkama poput lokacije, raspoloživosti ili cijene. Iznajmljivači imaju pristup kalendarima njihovih smještaja gdje su zapisane sve rezervacije i pružanje mogućnosti uređivanja oglasa apartmana. 
+### Semester Assignments
 
-### Idea
+- Link to Assignment 1: [**Assignment 1**](./assignments/Assignment1.md)
+- Link to Assignment 2: [**Assignment 2**](./assignments/Assignment2/)
+- Link to Assignment 3: [**Assignment 3**](https://koriscka-sucelja.vercel.app/)
+- Link to Assignment 4: [**Assignment 4**](./assignments/Assignment4/Home_design.png)
+- Link to Assignment 5: [**Assignment 5**](https://koriscka-sucelja.vercel.app/)
+- Link to Assignment 6: [**Assignment 6**](https://koriscka-sucelja.vercel.app/)
 
-Do ideje smo došli iz osobnih iskustava sa sličnim stranicama
+## Project Requirements
 
-### Video pitch
+### Web Application Requirements
 
-[Apartment Finder video](https://app.animaker.com/video/9CDDMP0APZUH3C9M)
+- [ ] The application will be used from a web browser
+- [ ] It will be accessible on devices of different sizes
+- [ ] Users can search/filter products or services
+- [ ] The application will support user login for showing private content
+- [ ] One of the public pages will be a blog containing multiple posts with diverse content (images, videos, code snippets)
+- [ ] Part of the application's content will be stored in a remote headless CMS system
 
+### Project Demonstration
 
+- [ ] Show the production version of the project or produce a video demonstrating the above requirements
+- [ ] The production version will be deployed online (on an appropriate cloud platform [Vercel](https://vercel.com), [Netlify](https://www.netlify.com/) or personal VPS)
+- [ ] Conduct usablity evaluation of your web application
+- [ ] Analyze the application's performance ([PageSpeed Insights](https://pagespeed.web.dev/))
+- [ ] The analysis results will be part of the final report
